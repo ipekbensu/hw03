@@ -1,0 +1,42 @@
+// QUESTION 1
+// SAMPLE DATA
+// Completed
+
+{
+    "attributes":{
+        "bearing":180.0,
+        "current_status":"IN_TRANSIT_TO",
+        "current_stop_sequence":4,
+        "direction_id":1,
+        "label":"1717",
+        "latitude":42.37276840209961,
+        "longitude":-71.11504364013672,
+        "speed":null,
+        "updated_at":"2019-02-28T17:32:07-05:00"
+    },
+    "id":"y1717",
+    "links":{
+        "self":"/vehicles/y1717"
+    },
+    "relationships":{
+        "route":{
+            "data":{
+                "id":"1",
+                "type":"route"
+            }
+        },
+        "stop":{
+            "data":{
+                "id":"2167",
+                "type":"stop"
+            }
+        },
+        "trip":{
+            "data":{
+                "id":"39366203",
+                "type":"trip"
+            }
+        }
+    },
+    "type":"vehicle"
+}
