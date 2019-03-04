@@ -2,6 +2,7 @@
 // FETCH DATA
 
 var url = 'https://api-v3.mbta.com/vehicles?api_key=b931eb2686024e9a8efca565d7c894e1&filter[route]=1&include=trip';
+var data = [];
 var count = 0;
 function getData(){
     fetch(url)
