@@ -16,7 +16,6 @@ Data: https://api-v3.mbta.com/vehicles?api_key=b931eb2686024e9a8efca565d7c894e1&
 <script>
     var map = [];
     var markers = [];
-    var data = [];
     getData();
 
     function mapInit(){
@@ -56,6 +55,14 @@ Data: https://api-v3.mbta.com/vehicles?api_key=b931eb2686024e9a8efca565d7c894e1&
     function markersMove(){
         data.forEach(function move(bus, index){
             markers[index].setPosition(new google.maps.LatLng(bus.attributes.latitude, bus.attributes.longitude));
+            if(bus.attributes.direction_id == 1){
+                markers[index].setTitle('inbound');
+                markers[index].setIcon('blue_MarkerI.png');
+            };
+            if(bus.attributes.direction_id == 0){
+                markers[index].setTitle('outbound');
+                markers[index].setIcon('red_MarkerO.png');
+            };
         });
     };
 </script>
